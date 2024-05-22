@@ -19,6 +19,25 @@ class Student(Base):
     def __repr__(self):
         return f"id: {self.id}, name: {self.name}"
     
+
+class Address(Base):
+    __tablename__ = "addresses"
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(60))
+    street = Column(String(90))
+    city = Column(String(90))
+    state = Column(String(2))
+    zip = Column(Integer)
+    
+    def __repr__(self):
+        return f"id: {self.id}, \
+                 name: {self.name}, \
+                 street: {self.state}, \
+                 city: {self.city}, \
+                 state: {self.state}, \
+                 zip: {self.zip}"
+    
     
 class Classes(Log_Base):
     __tablename__ = "classes"
@@ -27,6 +46,7 @@ class Classes(Log_Base):
     class_number = Column(Integer)
     class_name = Column(String(60))
     class_description = Column(String(200))
+    class_credits = Column(Integer)
     
     def __repr__(self):
         return f"id: {self.id}, number: {self.class_number}, name: {self.class_name}"
