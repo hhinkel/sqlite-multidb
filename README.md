@@ -13,7 +13,7 @@
    - `databases = engine1, engine2`
 9. If they dont change them in the databases line and the section heads that follow the databases line.
 10. Under the engine sections change the default line `driver://user:pass@localhost/dbname` to the proper SQLite call
-    - `sqlite:///sql_app.db`
+    - `sqlite:///db/sql_app.db`
 11. Open the migrations/env.py file
 12. If you want to be able to autogenerate you migrations
     - import your models
